@@ -1,0 +1,30 @@
+.stage {
+   height: 100px;
+   width: 50%;
+   margin: 0 auto;
+   background-color: blueviolet;
+   border-radius: 10px;
+   box-shadow: 5px 5px 10px #868686;
+   color: white;
+   text-align: center;
+   padding-top: 2rem;
+}
+.factor {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   .counter,
+   .total-Price {
+      height: 30px;
+      width: 80px;
+      background-color: hsl(271, 66%, 35%);
+      color: white;
+      font-size: 1.2em;
+      border-radius: 15px;
+      margin: 2rem;
+      text-align: center;
+   }
+}
+.chairs-grid {
+   display: grid;
+}

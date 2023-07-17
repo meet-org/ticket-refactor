@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import BookingConcertTicket from "./components/BookingConcertTicket";
 class App extends Component {
    render() {
       return (
          <>
-            <h1>hello</h1>
+            <BookingConcertTicket></BookingConcertTicket>
          </>
       );
    }
