@@ -26,5 +26,50 @@
    }
 }
 .chairs-grid {
-   display: grid;
+   padding: 2rem;
+   display: flex;
+   flex-wrap: wrap;
+   //    grid-template-columns: repeat(3, 1fr);
+   gap: 50px;
+   justify-content: center;
+   align-items: center;
+
+   .section-B {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 10px;
+      border: 2px dashed gray;
+      border-radius: 5px;
+      padding: 19px;
+   }
+   .chair {
+      background-color: gray;
+      color: white;
+      width: 48px;
+      height: 41px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: -2px 5px 6px #9b9090;
+      border-radius: 4px;
+   }
+   .section-A {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 10px;
+      border: 2px dashed gray;
+      border-radius: 5px;
+      padding: 19px;
+   }
+   .section-D {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+      border: 2px dashed gray;
+      border-radius: 5px;
+      padding: 19px;
+   }
 }

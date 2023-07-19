@@ -2,14 +2,14 @@ import React, { useState, useEffect, useContext } from "react";
 import "../style/main.scss";
 import { dataChairsContext } from "./BookingConcertTicket";
 
-const SectionA = () => {
+const SectionD = () => {
    return (
       <>
          <div className="section">
             {" "}
-            <div className="section-A">
+            <div className="section-D">
                {useContext(dataChairsContext)
-                  .filter((chair) => chair.section === "A")
+                  .filter((chair) => chair.section === "D")
                   .map((chair) => (
                      <div className="chair" key={chair.number}>
                         {chair.number}
@@ -21,4 +21,4 @@ const SectionA = () => {
    );
 };
 
-export default SectionA;
+export default SectionD;
