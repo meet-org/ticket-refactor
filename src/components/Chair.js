@@ -2,18 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 
 function Chair({ chair, setCount, setSum }) {
    const [chairCounter, setChairCounter] = useState(0);
-   const [stateSection, setStateSection] = useState("unselected");
    const eventTarget = useRef();
 
    useEffect(() => {
       if (chairCounter == 1) {
-         setStateSection("selected");
          eventTarget.current.style.background = "green";
       } else if (chairCounter == 2) {
-         setStateSection("reserving");
          eventTarget.current.style.background = "orange";
       } else if (chairCounter == 3) {
-         setStateSection("reserving");
          eventTarget.current.style.background = "red";
       }
    }, [chairCounter]);

@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import SectionA from "./SectionA";
 import "../style/main.scss";
 import SectionB from "./SectionB";
-import SectionC from "./SectionC";
-import SectionD from "./SectionD";
 export const dataChairsContext = React.createContext();
 
 const BookingConcertTicket = () => {
-   const initDataState = [];
    const [data, setData] = useState([]);
    const [count, setCount] = useState(0);
    const [sum, setSum] = useState(0);
    const [sections, setSections] = useState(["A", "B", "C", "D"]);
+   
    useEffect(() => {
       axios.get("/chairs.json").then((response) => setData(response.data));
    }, []);
