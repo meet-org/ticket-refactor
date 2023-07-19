@@ -1,45 +1,22 @@
 import React, { useState, useEffect, useContext, useRef } from "react";
 import "../style/main.scss";
 import { dataChairsContext } from "./BookingConcertTicket";
+import Chair from "./Chair";
 
-const SectionB = () => {
+const SectionB = ({section,setCount,setSum}) => {
    const initstate = useContext({ dataChairsContext });
-   const [stateSection, setStateSection] = useState("unselected");
-   const [count, setcount] = useState(0);
+
    const [stateChair, setStateChair] = useState(initstate);
 
-   const changestate = (event) => {
-      setcount(count + 1);
-      if (count == 1) {
-         setStateSection("selected");
-         event.target.style.background = "red";
-      } else if (count == 2) {
-         setStateSection("reserving");
-         event.target.style.background = "yellow";
-      }
-      //   setcount((prevnum) => prevnum + 1);
-      //   console.log(count);
-   };
    return (
       <>
          <div className="section">
             {" "}
             <div className="section-B">
                {useContext(dataChairsContext)
-                  .filter((chair) => chair.section === "B")
+                  .filter((chair) => chair.section === section)
                   .map((chair) => (
-                     <div
-                        className="chair"
-                        key={chair.number}
-                        onClick={
-                           (event) => changestate(event)
-                           //    if (count < 3) {
-                           //       changestate(event, stateSection);
-                           //    }
-                        }
-                     >
-                        {chair.number}
-                     </div>
+                     <Chair key={chair.number} chair={chair} setCount={setCount} setSum={setSum}/>
                   ))}
             </div>
          </div>
